@@ -1,0 +1,20 @@
+<div class="_loading" *ngIf="(isLoading$ | async)">
+  <mat-progress-spinner
+    class="example-margin"
+    color="accent"
+    mode="indeterminate"
+    strokeWidth="5">
+  </mat-progress-spinner>
+</div>
+
+
+<div class="cats_view_wrap" *ngIf="(cats$ | async) as cats">
+  <div class="cat_block" *ngFor="let cat of cats">
+    <img (click)="openModal(cat)" class="_img" [src]="cat.url" [alt]="cat.id" [width]="cat.width" [height]="cat.height">
+  </div>
+</div>
+
+<div class="_err" *ngIf="(error$ | async) as error">
+  <h1>{{error.status}}:(</h1>
+  <p>{{error.error.message}}</p>
+</div>

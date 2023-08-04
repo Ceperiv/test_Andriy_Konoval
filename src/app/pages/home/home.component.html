@@ -1,0 +1,21 @@
+<div class="home">
+  <h1 class="home-title">Welcome to the Cat Gallery</h1>
+  <button mat-button color="accent" routerLink="/cats">Click to choose more cats</button>
+  <div class="cat-gallery" *ngIf="(cats$ | async) as cats">
+    <img *ngFor="let cat of cats" [src]="cat.url" alt="{{cat.id}}" class="cat-image">
+  </div>
+</div>
+
+<div class="_loading" *ngIf="(isLoading$ | async)">
+  <mat-progress-spinner
+    class="example-margin"
+    color="accent"
+    mode="indeterminate"
+    strokeWidth="5">
+  </mat-progress-spinner>
+</div>
+
+<div class="_err" *ngIf="(error$ | async) as error">
+  <h1>{{error.status}}:(</h1>
+  <p>{{error.error.message}}</p>
+</div>

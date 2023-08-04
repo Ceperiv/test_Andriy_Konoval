@@ -1,0 +1,44 @@
+.aside_wrap {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  position: relative;
+  background: blueviolet;
+  box-shadow: 0 5px 10px;
+
+  ._aside {
+    width: 100%;
+    background: silver;
+    padding: 30px 20px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .toggle_button {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    transition: 0.1s;
+    z-index: 100;
+    color: darkgoldenrod;
+    cursor: pointer;
+  }
+
+  .toggle_button:hover {
+    scale: 1.1;
+    transition: 0.1s;
+  }
+
+  .toggle_button:active {
+    color: gray;
+    transition: .1s;
+  }
+
+  .active {
+    display: none;
+
+  }
+}

@@ -1,0 +1,5 @@
+<button *ngIf="showButton"
+        (click)="globalDoc.documentElement.scrollTop = 0"
+        class="button__up" [class.clicked]="buttonClicked">
+  <mat-icon>keyboard_arrow_up</mat-icon>
+</button>

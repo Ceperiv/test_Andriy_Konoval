@@ -1,0 +1,26 @@
+.contacts {
+  background-color: silver;
+  padding: 40px;
+  text-align: center;
+  color: aliceblue;
+  letter-spacing: .1rem;
+  text-shadow: 0 10px 15px;
+
+  .contacts-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+
+    p {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+  }
+}

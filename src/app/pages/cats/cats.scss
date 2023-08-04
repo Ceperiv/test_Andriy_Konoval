@@ -1,0 +1,50 @@
+.cats_wrap {
+  width: 100%;
+  display: flex;
+
+  app-side-bar {
+    width: max-content;
+    max-width: 20%;
+  }
+
+  app-cats {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cats_wrap {
+    app-side-bar {
+      max-width: 40%;
+    }
+
+    app-cats {
+      width: 50%
+    }
+  }
+}
+
+@media (max-width: 488px) {
+  .cats_wrap {
+    app-side-bar {
+      max-width: 50%;
+    }
+
+    app-cats {
+      width: 40%
+    }
+  }
+}
+
+@media (max-width: 508px) {
+  .cats_wrap {
+    flex-direction: column;
+    app-side-bar {
+      max-width: 100%;
+    }
+
+    app-cats {
+      width: 100%
+    }
+  }
+}
