@@ -1,6 +1,6 @@
 ### Build ###
 FROM node:18-alpine
-WORKDIR  src/app
+WORKDIR  /src/app
 COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
