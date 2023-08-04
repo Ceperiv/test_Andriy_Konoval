@@ -6,4 +6,4 @@ RUN npm install
 COPY . .
 RUN npm run build
 ### Run ###
-CMD [ "node", "index.js" ]
+CMD [ "node", "app.component.js" ]
