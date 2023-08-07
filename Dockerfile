@@ -8,4 +8,4 @@ COPY . .
 RUN npm run build:prod
 EXPOSE 8080
 CMD ["http-server", "dist"]
-#CMD ["node", "index.js"]
+
