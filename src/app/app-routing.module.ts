@@ -7,7 +7,7 @@ import {Error404Component, Cats, HomeComponent, InfoComponent} from "./pages";
 const routes: Routes = [
   {
     path: '', component:MainLayoutComponent, children: [
-      {path: '', redirectTo: 'contacts', pathMatch: 'full'},
+      {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: 'home', component: HomeComponent},
       {path: 'cats', component: Cats},
       {path: 'contacts', component: InfoComponent},

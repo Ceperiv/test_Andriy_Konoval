@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "server": "node server.js",
-    "build": "ng build",
+    "server": "node dist/server.js",
+    "build:prod": "ng build -c production --base-href / --output-path=dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^15.0.1",
-    "@angular/cli": "~15.0.1",
+    "@angular/cli": "^15.2.9",
     "@angular/compiler-cli": "^15.0.0",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.5.0",

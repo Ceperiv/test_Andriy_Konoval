@@ -4,7 +4,8 @@ COPY package*.json ./
 RUN npm install -g npm@latest
 RUN npm install
 COPY . .
-#RUN npm run build
-EXPOSE 4200
-CMD ["npm", "start"]
+RUN npm run build:prod
+RUN npm install http-server -g
+EXPOSE 8080
+CMD ["http-server ", "dist/"]
 #CMD ["node", "index.js"]
