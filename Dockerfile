@@ -7,3 +7,4 @@ COPY . .
 #RUN npm run build
 EXPOSE 4200
 CMD ["npm", "start"]
+#CMD ["node", "index.js"]
